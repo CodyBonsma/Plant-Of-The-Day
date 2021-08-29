@@ -1,5 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.css";
+
+const [plant, setPlant] = useState();
+
+const Plants = () => {
+useEffect(() => {
+    
+})
+}
+
 
 const Home = () => {
   return (
