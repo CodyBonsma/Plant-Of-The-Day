@@ -11,11 +11,15 @@ app.use(express.json());
 app.use(express.static("client/build"));
 app.use(express.static(path.join(__dirname, "public")));
 
+console.log(__dirname)
+
 app.get("/api/plants", (req, res) => {
   const plants = ["rose", "hydreangia", "bitches", "cookout"];
 
   res.json(plants);
   //   res.json({success: "true"})
+}).then((response) => {
+    res.json(response)
 });
 
 app.post("/api/plants", (req, res) => {

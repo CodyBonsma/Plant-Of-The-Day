@@ -7,11 +7,12 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("/api/plants", (req,res) => {
-          console.log(req.body)
+      .get("/api/plants", (req, res) => {
+        console.log(req.body);
       })
       .then((res) => {
         console.log("retrieved plants", res);
+        res.json(res)
       })
       .catch((err) => {
         if (err) throw err;
