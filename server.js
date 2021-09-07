@@ -11,9 +11,9 @@ app.use(express.json());
 app.use(express.static("client/build"));
 app.use(express.static(path.join(__dirname, "public")));
 
-const plants = ["rose", "hydreangia", "bitches", "cookout"];
-
 app.get("/api/plants", (req, res) => {
+  const plants = ["rose", "hydreangia", "bitches", "cookout"];
+
   res.json(plants);
   //   res.json({success: "true"})
 });

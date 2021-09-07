@@ -7,7 +7,9 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("/api/plants")
+      .get("/api/plants", (req,res) => {
+          console.log(req.body)
+      })
       .then((res) => {
         console.log("retrieved plants", res);
       })
