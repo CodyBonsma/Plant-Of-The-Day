@@ -18,8 +18,6 @@ app.get("/api/plants", (req, res) => {
 
   res.json(plants);
   //   res.json({success: "true"})
-}).then((response) => {
-    res.json(response)
 });
 
 app.post("/api/plants", (req, res) => {

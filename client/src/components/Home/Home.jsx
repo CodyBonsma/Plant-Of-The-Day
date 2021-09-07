@@ -12,7 +12,6 @@ const Home = () => {
       })
       .then((res) => {
         console.log("retrieved plants", res);
-        res.json(res)
       })
       .catch((err) => {
         if (err) throw err;
