@@ -4,14 +4,15 @@ import axios from "axios";
 
 const Home = () => {
   const [plant, setPlant] = useState();
+  const URL = 'http://localhost:3000';
 
   useEffect(() => {
     axios
-      .get("/api/plants", (req, res) => {
+      .get(URL + "/api/plants", (req, res) => {
         console.log(req.body);
       })
       .then((res) => {
-        console.log("retrieved plants", res);
+        console.log("retrieved plants from client HOME", res);
       })
       .catch((err) => {
         if (err) throw err;

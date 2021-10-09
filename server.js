@@ -13,15 +13,17 @@ app.use(express.static(path.join(__dirname, "public")));
 
 console.log(__dirname)
 
+// app.get("/api/plants", (req, res) => {
+//   const plants = ["rose", "hydreangia", "bitches", "cookout"];
+
+//   res.json(plants);
+//   //   res.json({success: "true"})
+// });
+
+const plantsTwo = ["another", "list", "ofPlants"]
+
 app.get("/api/plants", (req, res) => {
-  const plants = ["rose", "hydreangia", "bitches", "cookout"];
-
-  res.json(plants);
-  //   res.json({success: "true"})
-});
-
-app.post("/api/plants", (req, res) => {
-  res.json(plants);
+  res.json(plantsTwo);
 });
 
 app.listen(PORT, () => {
